@@ -8,7 +8,7 @@ public class CalculatorTest {
     @Test
     void testSum() {
         Calculator calculator = new Calculator();
-        int result = calculator.sum(1, 3);
+        int result = calculator.sum(1, 2);
         assertEquals(3, result, "Expected sum of 1 and 2 to be 3");
     }
 }
