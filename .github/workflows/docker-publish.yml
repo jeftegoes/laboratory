@@ -40,3 +40,8 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/${{ github.repository }}:latest
+      - name: Deploy to Coolify
+        run: |
+          curl --request POST \
+            "${{ secrets.COOLIFY_DEPLOY_WEBHOOK }}" \
+            --header "Authorization: Bearer ${{ secrets.COOLIFY_TOKEN }}"
